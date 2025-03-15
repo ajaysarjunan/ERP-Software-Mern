@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import GoBack from '../components/GoBack';
 
 interface Customer {
   _id: string;
@@ -167,7 +168,8 @@ const Sales: React.FC = () => {
   }, [productSearch]);
 
   return (
-    <div className="p-4">
+    <div className="p-6">
+      <GoBack />
       <h1 className="text-2xl font-bold mb-4">New Sale</h1>
       
       {error && (

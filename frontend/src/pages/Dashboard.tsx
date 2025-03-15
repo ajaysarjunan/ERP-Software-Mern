@@ -33,16 +33,18 @@ const Dashboard: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {/* Common Actions */}
         <div className="bg-white p-6 rounded-lg shadow-md">
           <h3 className="text-lg font-semibold mb-4">Quick Actions</h3>
           <div className="space-y-2">
-            <button
-              onClick={() => handleNavigation('/sales/new')}
-              className="w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-            >
-              New Sale
-            </button>
+            {/* Show New Sale button only for CASHIER */}
+            {user?.role === UserRole.CASHIER && (
+              <button
+                onClick={() => handleNavigation('/sales/new')}
+                className="w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              >
+                New Sale
+              </button>
+            )}
 
             {/* Show these buttons only for SUPER_ADMIN, ADMIN, and MANAGER */}
             {user?.role && [UserRole.SUPER_ADMIN, UserRole.ADMIN, UserRole.MANAGER].includes(user.role) && (

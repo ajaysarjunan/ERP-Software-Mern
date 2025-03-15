@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { UserRole } from '../types/auth.types';
+import GoBack from '../components/GoBack';
 
 interface User {
   _id: string;
@@ -94,6 +95,7 @@ const Users: React.FC = () => {
 
   return (
     <div className="p-6">
+      <GoBack />
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">User Management</h1>
       </div>

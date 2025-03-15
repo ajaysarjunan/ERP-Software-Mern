@@ -1,0 +1,18 @@
+{
+	"info": {
+		"_postman_id": "a70b88a8-4a16-4aae-906d-d17061d23ecd",
+		"name": "sale",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36711181"
+	},
+	"item": [
+		{
+			"name": "create sale",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

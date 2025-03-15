@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "ff430ac7-2e7b-4e4e-920c-23ed24433694",
+		"name": "products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36711181"
+	},
+	"item": [
+		{
+			"name": "update a stock",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2QyOWNmNmM5OGI1ODBkOGE2ZmUzMjMiLCJpYXQiOjE3NDE5NDcxNTIsImV4cCI6MTc0MjAzMzU1Mn0.4DxVZeHZwoZf8gP6PfKB-7BDWW5UG6aQE7xOF3dg9g8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"price\": 159.99,\r\n  \"sizes\": [\r\n    { \"size\": \"7\", \"quantity\": 8 },\r\n    { \"size\": \"8\", \"quantity\": 12 }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/67d401cbcc999c88623fd47c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"67d401cbcc999c88623fd47c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update a product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2QyOWNmNmM5OGI1ODBkOGE2ZmUzMjMiLCJpYXQiOjE3NDE5NTExMDUsImV4cCI6MTc0MjAzNzUwNX0.KH06bOsadjuCqAhHCES2REH3DqDHFSZDX30b34PiR_Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"price\": 159.99,\r\n  \"sizes\": [\r\n    { \"size\": \"7\", \"quantity\": 8 },\r\n    { \"size\": \"8\", \"quantity\": 12 }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/67d401cbcc999c88623fd47c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"67d401cbcc999c88623fd47c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add a product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2QyOWNmNmM5OGI1ODBkOGE2ZmUzMjMiLCJpYXQiOjE3NDE5NTExMDUsImV4cCI6MTc0MjAzNzUwNX0.KH06bOsadjuCqAhHCES2REH3DqDHFSZDX30b34PiR_Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nike Air Zoom Pegasus\",\r\n    \"description\": \"Premium running shoes with responsive cushioning\",\r\n    \"price\": 129.99,\r\n    \"category\": \"SPORTS_SHOES\",\r\n    \"gender\": \"MENS\",\r\n    \"brand\": \"Nike\",\r\n    \"color\": \"White/Blue\",\r\n    \"sizes\": [\r\n        { \"size\": \"7\", \"quantity\": 10 },\r\n        { \"size\": \"8\", \"quantity\": 15 },\r\n        { \"size\": \"9\", \"quantity\": 20 },\r\n        { \"size\": \"10\", \"quantity\": 15 },\r\n        { \"size\": \"11\", \"quantity\": 10 }\r\n    ],\r\n    \"minStockLevel\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2QyOWNmNmM5OGI1ODBkOGE2ZmUzMjMiLCJpYXQiOjE3NDE5NDcxNTIsImV4cCI6MTc0MjAzMzU1Mn0.4DxVZeHZwoZf8gP6PfKB-7BDWW5UG6aQE7xOF3dg9g8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/search?category=SPORTS_SHOES&gender=MENS&brand=Nike&minPrice=100&maxPrice=200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "SPORTS_SHOES"
+						},
+						{
+							"key": "gender",
+							"value": "MENS"
+						},
+						{
+							"key": "brand",
+							"value": "Nike"
+						},
+						{
+							"key": "minPrice",
+							"value": "100"
+						},
+						{
+							"key": "maxPrice",
+							"value": "200"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get low stock",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2QyOWNmNmM5OGI1ODBkOGE2ZmUzMjMiLCJpYXQiOjE3NDE5NDcxNTIsImV4cCI6MTc0MjAzMzU1Mn0.4DxVZeHZwoZf8gP6PfKB-7BDWW5UG6aQE7xOF3dg9g8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/low-stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"low-stock"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
